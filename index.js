@@ -29,7 +29,8 @@ app.get("/api/:date?", function (req, res) {
 
   if (!date) {
     date = new Date();
-  } else if (!isNaN(date)) {
+  } else if (/^\d+$/.test(date)) { 
+    // Check if it's a valid Unix timestamp (all digits)
     date = new Date(parseInt(date));
   } else {
     date = new Date(date);
@@ -49,3 +50,4 @@ app.get("/api/:date?", function (req, res) {
 var listener = app.listen(process.env.PORT || 3000, function () {
   console.log("Your app is listening on port " + listener.address().port);
 });
+
