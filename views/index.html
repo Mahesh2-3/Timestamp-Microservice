@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Timestamp Microservice | freeCodeCamp.org</title>
+      <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon"/>
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+      <link href="/public/style.css" rel="stylesheet" type="text/css">
+   </head>
+
+   <body>
+      <h1>Timestamp Microservice</h1>
+      <hr />
+      <div class="container">
+         <h2>Example Usage:</h2>
+         <ul>
+            <li><a id="example1" href="#">Loading...</a></li>
+            <li><a id="example2" href="#">Loading...</a></li>
+         </ul>
+
+         <h2>Example Output:</h2>
+         <p>
+            <code>{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code>
+         </p>
+      </div>
+      <div class="footer">
+         <p>By <a href="https://www.freecodecamp.org/">freeCodeCamp.org</a></p>
+      </div>
+
+      <script>
+         // Dynamically set project URLs
+         document.getElementById("example1").href = window.location.origin + "/api/2015-12-25";
+         document.getElementById("example1").textContent = window.location.origin + "/api/2015-12-25";
+
+         document.getElementById("example2").href = window.location.origin + "/api/1451001600000";
+         document.getElementById("example2").textContent = window.location.origin + "/api/1451001600000";
+      </script>
+   </body>
+</html>
